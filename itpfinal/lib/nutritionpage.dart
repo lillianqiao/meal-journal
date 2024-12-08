@@ -77,7 +77,7 @@ class NutritionResultPage extends StatelessWidget {
       ); 
     },
   ),
-      //when user clicks add button from the timeline, page gets popped so the next time the user adds their meal
+      //when user clicks add button from the timeline, the current nutrition page gets popped so the next time the user adds their meal
       //it populates the timeline with all their entries, not just their last entry
       floatingActionButton: FloatingActionButton( 
         onPressed: () 

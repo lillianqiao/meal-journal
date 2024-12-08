@@ -157,12 +157,12 @@ class _AddMealFormState extends State<MealAddPage> { //the form style page to al
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 ElevatedButton.icon(
-                                  onPressed: () => _pickImage(ImageSource.camera), //imagesource.camera is a built in 
+                                  onPressed: () => _pickImage(ImageSource.camera), //imagesource.camera is a built in function that allows users to open their device's camera and take a photo
                                   icon: const Icon(Icons.camera),
                                   label: const Text('Camera'),
                                 ),
                                 ElevatedButton.icon(
-                                  onPressed: () => _pickImage(ImageSource.gallery),
+                                  onPressed: () => _pickImage(ImageSource.gallery), //imagesource.gallery is a built in function that allows users to open their own gallery after they give access
                                   icon: const Icon(Icons.photo_library),
                                   label: const Text('Gallery'),
                                 ),
@@ -188,14 +188,14 @@ class _AddMealFormState extends State<MealAddPage> { //the form style page to al
                         },
                       ),
                       ListTile(
-                        title: Text('Date: ${DateFormat.yMMMd().format(_selectedDate)}'),
+                        title: Text('Date: ${DateFormat.yMMMd().format(_selectedDate)}'), 
                         trailing: const Icon(Icons.calendar_today), 
-                        onTap: () => _selectDate(context),
+                        onTap: () => _selectDate(context), //when user clicks on the preselected date based on the current date, the selectDate function calls the showDate picker
                       ),
                       ListTile(
                         title: Text('Time: ${_selectedTime.format(context)}'),
                         trailing: const Icon(Icons.access_time),
-                        onTap: () => _selectTime(context),
+                        onTap: () => _selectTime(context), //when user clicks on the preselected time based on the current time, the selectTime function calls the showTime picker
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 16.0),
